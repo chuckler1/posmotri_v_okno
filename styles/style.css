@@ -112,15 +112,12 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline: 1px solid currentColor;
   outline-offset: 1px;
-}
+} 
 
 .search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__label:hover {
-  text-decoration: underline;
-  cursor: pointer;
+  border-block-start: 1px solid transparent;
+  border-block-end: 1px solid transparent;
+  outline: none; 
 }
 
 .search-form__checkbox-list {
@@ -147,8 +144,14 @@ ol {
   block-size: 15px;
 }
 
+.search-form__label-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .button {
   border: 1px solid currentColor;
+  padding: 0;
   color: currentColor;
   font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
@@ -184,7 +187,7 @@ ol {
 }
 
 .title {
-  padding-block-start: 5px;
+  padding-block-start: 9px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -207,20 +210,20 @@ ol {
 
 .content__list {
   position: relative;
-  padding-block-start: 23px;
+  margin-block-start: 26px;
   overflow: auto;
-  block-size: 323px;
+  block-size: 298px;
   scrollbar-width: 5px;
   scrollbar-color: #545050;
 }
 
 .content__list-item:not(:last-child) {
-  margin-block-end: 31px;
+  margin-block-end: 34px;
 }
 
 .content__card-link {
   display: block;
-  border: 1px solid transparent;
+  margin: 0 2px;
   color: currentColor;
   text-decoration: none;
 }
@@ -234,7 +237,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid currentColor;
+  outline: 1px solid currentColor;
 }
 
 .content__card-link_current {
@@ -252,16 +255,17 @@ ol {
 }
 
 .content__video-card-title {
+  margin: 3px 0 5px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
-  line-height: 1.2;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .content__video-card-description {
-  line-height: 16.2px;
+  line-height: 0.9;
 }
 
 .content__video-card-thumbnail {
